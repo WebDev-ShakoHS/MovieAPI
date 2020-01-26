@@ -43,11 +43,11 @@ $(function(){
 
 						//Display the poster and a message announcing the result
 
-						$('#poster').html('<h2 class="loading">Well, gee whiz! We found you a poster, skip!</h2><img id="thePoster" src=' + baseimg + json.results[0].poster_path + ' />');
+						$('#poster').html('<h2 class="loading">We found you a poster!</h2><img id="thePoster" src=' + baseimg + json.results[0].poster_path + ' />');
 					} else {
-						$.getJSON("http://api.themoviedb.org/3/search/movie?query=goonies&api_key=" + api_key, 
+						$.getJSON("http://api.themoviedb.org/3/search/movie?query=nothing&api_key=" + api_key, 
 							function(json){
-								$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search. Perhaps you were looking for The Goonies?</h2><img id="thePoster" src='+baseimg + json.results[0].poster_path+'/>');
+								$('#poster').html('<h2 class="loading">We\'re afraid nothing was found for that search.</h2><img id="thePoster" src='+baseimg +  '/wgHcU0xp1txh21S9qdUUUr0d65x.jpg'+'>');
 	                    });                 
 	                }
 			});
